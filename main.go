@@ -91,10 +91,12 @@ func showSetting(show bool) {
 			fmt.Println("Error retrieving user:", err)
 			return
 		}
+		fmt.Println("Current 3x-ui settings:")
+		fmt.Println("------------------------")
 		fmt.Printf("username: %v\n", userModel.Username)
 		// Note: password is shown in plaintext here; only use on trusted machines
 		fmt.Printf("password: %v\n", userModel.Password)
-		fmt.Printf("port: %v\n", port)
+		fmt.Printf("port:     %v\n", port)
 	}
 }
 
