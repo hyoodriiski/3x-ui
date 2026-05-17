@@ -92,6 +92,7 @@ func showSetting(show bool) {
 			return
 		}
 		fmt.Printf("username: %v\n", userModel.Username)
+		// Note: password is shown in plaintext here; only use on trusted machines
 		fmt.Printf("password: %v\n", userModel.Password)
 		fmt.Printf("port: %v\n", port)
 	}
