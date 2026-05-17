@@ -25,7 +25,8 @@ func runWebServer() {
 
 	eLogLevel := os.Getenv("XUI_LOG_LEVEL")
 	if eLogLevel == "" {
-		eLogLevel = "info"
+		// Default to debug in personal builds for easier troubleshooting
+		eLogLevel = "debug"
 	}
 
 	switch eLogLevel {
