@@ -97,6 +97,8 @@ func showSetting(show bool) {
 		// Note: password is shown in plaintext here; only use on trusted machines
 		fmt.Printf("password: %v\n", userModel.Password)
 		fmt.Printf("port:     %v\n", port)
+		fmt.Println("------------------------")
+		fmt.Printf("db path:  %v\n", config.GetDBPath())
 	}
 }
 
