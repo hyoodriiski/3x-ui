@@ -107,9 +107,13 @@ func main() {
 
 	flag.BoolVar(&showSettingFlag, "show", false, "Show current settings (username, password, port)")
 	flag.BoolVar(&resetSettingFlag, "reset", false, "Reset all settings to default values")
+	// -version flag: quickly print build info without starting the server
+	versionFlag := flag.Bool("version", false, "Print version information and exit")
 	flag.Parse()
 
 	switch {
+	case *versionFlag:
+		fmt.Printf("%v %v\n", config.GetName(), config.GetVersion())
 	case resetSettingFlag:
 		resetSetting()
 	case showSettingFlag:
