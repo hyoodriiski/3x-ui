@@ -99,6 +99,7 @@ func showSetting(show bool) {
 		fmt.Printf("port:     %v\n", port)
 		fmt.Println("------------------------")
 		fmt.Printf("db path:  %v\n", config.GetDBPath())
+		fmt.Printf("version:  %v\n", config.GetVersion())
 	}
 }
 
